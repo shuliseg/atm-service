@@ -8,5 +8,7 @@ public interface WithdrawalsDao {
 
     public Double getWithdrawalsSumByCreditCardAndSecretCode(WithdrawalRequest withdrawalRequest) throws WithdrawalException;
 
-    public void addAmountForCustomerByCreditCard(WithdrawalRequest withdrawalRequest);
+    public String addAmountForCustomerByCreditCard(WithdrawalRequest withdrawalRequest) throws WithdrawalException;
+
+    public String removeWithdrawalRecord(WithdrawalRequest withdrawalRequest) throws WithdrawalException;
 }
